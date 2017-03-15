@@ -1,0 +1,140 @@
+{
+  "apiVersion": "1.40",
+  "apiList": [
+    {
+      "name": "example",
+      "desc": "範例API",
+      "catalog": "範例",
+      "url": "API URL",
+      "img": "images/example/example.png",
+      "params": [
+        {
+          "name": "param1",
+          "desc": "參數-1"
+        },
+        {
+          "name": "param2",
+          "desc": "參數-2"
+        }
+      ],
+      "return": {
+        "attr1": "回傳值1",
+        "attr2": "回傳值2",
+        "attrList": [
+          {
+            "listAttr1": "列表值1",
+            "listAttr2": "列表值2"
+          }
+        ]
+      },
+      "note": {
+        "paramsDesc": "補述參數說明",
+        "desc": "這個是補述說明回傳值",
+        "returnOptions": [
+          {
+            "name": "回傳值1",
+            "column": "attr1",
+            "options": [
+              {
+                "name": "固定值1",
+                "desc": "value1"
+              },
+              {
+                "name": "固定值2",
+                "desc": "value2"
+              }
+            ]
+          }
+        ],
+        "paramsOptions": [
+          {
+            "name": "參數1",
+            "column": "param1",
+            "options": [
+              {
+                "name": "固定值1",
+                "desc": "value1"
+              },
+              {
+                "name": "固定值2",
+                "desc": "value2"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "exampleCopy",
+      "desc": "複製用範例",
+      "catalog": "範例",
+      "url": "API URL",
+      "img": "",
+      "params": [],
+      "return": {},
+      "note": {
+        "paramsDesc": "",
+        "desc": "",
+        "paramsOptions": [],
+        "returnOptions": []
+      }
+    },
+    {
+      "name": "getCourseList",
+      "desc": "取得課程列表",
+      "catalog": "共用",
+      "url": "/DataServlet?pg=CourseSelectorAjaxPage",
+      "img": "images/common/getCourseList.png",
+      "params": [
+        {
+          "name": "sn",
+          "desc": "課程編號"
+        },
+        {
+          "name": "name",
+          "desc": "課程名稱"
+        },
+        {
+          "name": "catalogId",
+          "desc": "課程目錄"
+        },
+        {
+          "name": "page",
+          "desc": "頁數"
+        }
+      ],
+      "return": {
+        "allRecord": "總數",
+        "pageSplit": "一頁單位",
+        "list": [
+          {
+            "id": "編號",
+            "sn": "課程編號",
+            "name": "課程名稱",
+            "type": "課程類別"
+          }
+        ]
+      },
+      "note": {
+        "desc": "",
+        "paramsOptions": [],
+        "returnOptions": [
+          {
+            "name": "課程類別",
+            "column": "type",
+            "options": [
+              {
+                "name": "線上",
+                "desc": "ONLINE"
+              },
+              {
+                "name": "教室",
+                "desc": "OFFLINE"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
