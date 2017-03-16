@@ -16,6 +16,8 @@ var mySingleton = (function () {
       // Public methods and variables
       publicMethod: function () {
         console.log( "The public can see me!" );
+        privateMethod();
+        return 'end';
       },
 
       publicProperty: "I am also public",
@@ -65,17 +67,23 @@ var myBadSingleton = (function () {
 
 // Usage:
 
-var singleA = mySingleton.getInstance();
-var singleB = mySingleton.getInstance();
-console.log( singleA.getRandomNumber() );
-console.log( singleB.getRandomNumber() );
-console.log( singleA.getRandomNumber() === singleB.getRandomNumber() ); // true
+console.log( mySingleton.getInstance().privateVariable );
+console.log( 'mySingleton.getInstance().publicMethod() start' );
+console.log( mySingleton.getInstance().publicMethod() ); //more underdefine?
+console.log( 'mySingleton.getInstance().publicMethod() end' );
+console.log( mySingleton.getInstance().publicProperty );
 
-var badSingleA = myBadSingleton.getInstance();
-var badSingleB = myBadSingleton.getInstance();
-console.log( badSingleA.getRandomNumber() );
-console.log( badSingleB.getRandomNumber() );
-console.log( badSingleA.getRandomNumber() !== badSingleB.getRandomNumber() ); // true
+// var singleA = mySingleton.getInstance();
+// var singleB = mySingleton.getInstance();
+// console.log( singleA.getRandomNumber() );
+// console.log( singleB.getRandomNumber() );
+// console.log( singleA.getRandomNumber() === singleB.getRandomNumber() ); // true
+
+// var badSingleA = myBadSingleton.getInstance();
+// var badSingleB = myBadSingleton.getInstance();
+// console.log( badSingleA.getRandomNumber() );
+// console.log( badSingleB.getRandomNumber() );
+// console.log( badSingleA.getRandomNumber() !== badSingleB.getRandomNumber() ); // true
 
 // Note: as we are working with random numbers, there is a
 // mathematical possibility both numbers will be the same,
