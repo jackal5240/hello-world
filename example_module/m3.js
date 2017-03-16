@@ -63,7 +63,7 @@ var myBadSingleton = (function () {
     }
   };
 
-})();
+}) ();
 
 // Usage:
 

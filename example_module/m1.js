@@ -11,7 +11,7 @@ var modularpattern = (function() {
                 return sum = 0;
             }
         }
-    }());
+    }) ();
     alert(modularpattern.add());
     alert(modularpattern.add());
     alert(modularpattern.reset());
