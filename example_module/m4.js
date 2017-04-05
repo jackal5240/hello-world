@@ -5,6 +5,7 @@ var pubsub = (function(myObject) {
     console.log('aaa');
   };
 
+  //return myObject;
   return {
     init: function() {
         _init();
