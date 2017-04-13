@@ -12,6 +12,6 @@ var modularpattern = (function() {
             }
         }
     }) ();
-    alert(modularpattern.add());
-    alert(modularpattern.add());
-    alert(modularpattern.reset());
+alert(modularpattern.add());
+alert(modularpattern.add());
+alert(modularpattern.reset());
