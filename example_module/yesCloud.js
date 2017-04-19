@@ -8,8 +8,8 @@
   // var _conf = {};
   // var _tmpl = {};
   // var _util = {};
-  // var _logic = function () {};
-  // var _renderUI = function () {};
+  // var _logic = {};
+  // var _renderUI = {};
   // var _bindUI = function () {};
   // var _init = function () {};
 
@@ -30,10 +30,10 @@
   };
 
   var _tmpl = {
-    container: $('#tpContainer').html()
+    $container: $('#tpContainer').html()
   };
 
-  var _util = function () {
+  var _util = {
     clearPreRequest: function (url) {
       var pendingRequests = {};
       $.ajaxPrefilter (function (options, originalOptions, jqXHR) {
@@ -68,12 +68,12 @@
           if (jQuery.isFunction(complete)) {
             complete.apply(this, arguments);
           }
-        }
-      })
+        };
+      });
     }
-  },
+  };
 
-  var _logic = function () {
+  var _logic = {
     getData: function () {
       _util.clearPreRequest(_con.firstApi.apiUrl);
 
@@ -112,7 +112,7 @@
     }
   };
 
-  var _renderUI = function () {
+  var _renderUI = {
     firstRender: function () {
       $container.html(Mustache.reder(_tmpl.container, _store.dataObj));
     }
