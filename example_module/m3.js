@@ -67,7 +67,7 @@ var myBadSingleton = (function () {
 
 // Usage:
 
-console.log( mySingleton.getInstance().privateVariable );
+console.log( mySingleton.jf().privateVariable );
 console.log( 'mySingleton.getInstance().publicMethod() start' );
 console.log( mySingleton.getInstance().publicMethod() ); //more underdefine?
 console.log( 'mySingleton.getInstance().publicMethod() end' );
