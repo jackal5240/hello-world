@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    var AJAX_WORK = function(inputURL) {
+      $.ajax({
+        url: inputURL,
+        data: $('#sentToBack').serialize(),
+        type: 'POST',
+        dataType: 'json',
+        async: false,
+        success: function(msg) {
+          alert(msg);
+        },
+        complete: function() {
+          $('#loadingIMG').hide();
+          $('#sentToBack').show();
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+          console.log(xhr.status);
+          console.log(thrownError);
+        }
+      });
+    }
+
+    var Submit = function() {
+      var URLs = 'back.php';
+      $('#loadingIMG').show();
+      $('#sentToBack').hide();
+
+      setTimeout(function() {
+        AJAX_WORK(URLs, '');
+      }, 1);
+    }
+  </script>
+</head>
+<body>
+  <form id="sentToBack">
+    <input type="text" name="Text"/>
+    <input type="button" value="GO" onClick="Submit()"/>
+  </form>
+
+  <div id="loadingIMG" style="display: none"><img src="loading.svg" height='14'/>Data Loading</div>
+</body>
+</html>
