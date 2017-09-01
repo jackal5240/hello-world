@@ -20,14 +20,14 @@
           $('#sentToBack').show();
         },
         error: function(xhr, ajaxOptions, thrownError) {
-          console.log(xhr.status);
-          console.log(thrownError);
+          alert(xhr.status);
+          alert(thrownError);
         }
       });
     }
 
     var Submit = function() {
-      var URLs = 'back.php';
+      var URLs = '';
       $('#loadingIMG').show();
       $('#sentToBack').hide();
 
