@@ -1,0 +1,125 @@
+
+Main類別
+
+
+
+public class Main {
+
+  public static void main(String[] arg){
+
+    Sub sub = new Sub();
+
+  }
+
+}
+
+====================
+
+父類別
+
+public class Super {
+
+  static String s = "Super=====";
+
+  static {  //類別的初始化
+
+    System.out.println("instance super class static");
+
+  }
+
+  {  //類別物件的建立
+
+    System.out.println("instance super class");
+
+  }
+
+  public Super(){  //建構子
+
+    System.out.println("into Super constructor");
+
+  }
+
+}
+
+====================
+
+
+
+子類別
+
+
+
+public class Sub extends Super{
+
+  static String s1 = "Sub1-----";
+
+  static String s2 = "Sub2-----";
+
+  static {  //類別的初始化
+
+    System.out.println("instance sub class static");
+
+  }
+
+  {  //類別物件的建立
+
+    System.out.println("instance sub class");
+
+  }
+
+  public Sub(){  //建構子
+
+    System.out.println("into Sub constructor");
+
+  }
+
+}
+
+
+
+estimate price according to 2020-09-11 00:00:00
+initial number of stock 7
+after considering fee 7
+after considering 1000 share 4
+---------------
+|  portfolio  |
+---------------
+stock_id
+1714    2.0
+1810    2.0
+3704    1.0
+4306    1.0
+Name: 2020-09-11 00:00:00, dtype: float64
+total cost
+79250.0
+
+estimate price according to 2020-11-16 00:00:00
+initial number of stock 8
+after considering fee 8
+after considering 1000 share 4
+---------------
+|  portfolio  |
+---------------
+stock_id
+1714    2.0
+1810    2.0
+3704    1.0
+4306    1.0
+Name: 2020-11-16 00:00:00, dtype: float64
+total cost
+78350.0
+
+estimate price according to 2020-11-20 00:00:00
+initial number of stock 6
+after considering fee 6
+after considering 1000 share 3
+---------------
+|  portfolio  |
+---------------
+stock_id
+2013    1.0
+3704    1.0
+4306    2.0
+Name: 2020-11-20 00:00:00, dtype: float64
+total cost
+87800.0
